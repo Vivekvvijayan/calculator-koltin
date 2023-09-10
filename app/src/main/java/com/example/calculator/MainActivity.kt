@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
             findViewById<Button>(id).apply {
                 setOnClickListener {
                     val textFieldToAdd =
-                        if (editTextOne.hasFocus() && editTextOne.getLastElement()) editTextOne
-                        else if (editTextTwo.hasFocus() && editTextTwo.getLastElement()) editTextTwo else return@setOnClickListener
-
+                        if (editTextOne.hasFocus()) editTextOne
+                        else if (editTextTwo.hasFocus()) editTextTwo else return@setOnClickListener
+                    if (textFieldToAdd.text.contains(".") && text.toString() == ".") return@setOnClickListener
                     textFieldToAdd.append(text.toString())
                 }
             }
@@ -95,8 +95,6 @@ class MainActivity : AppCompatActivity() {
                 else -> ""
             }
     }
-
-    private fun EditText.getLastElement() = text.toString().takeIf { it.isNotEmpty() }?.last() != '.'
 
     private fun setUpTextChangeWatcher() {
 
