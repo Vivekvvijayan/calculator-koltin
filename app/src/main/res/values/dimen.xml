@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimension_8dp">8dp</dimen>
+    <dimen name="dimension_16dp">16dp</dimen>
+    <dimen name="dimension_32dp">32dp</dimen>
+    <dimen name="dimension_56dp">56dp</dimen>
+    <dimen name="fs_20sp">20sp</dimen>
+    <dimen name="fs_30sp">30sp</dimen>
+    <dimen name="fs_25sp">25sp</dimen>
+    <dimen name="btn_width">70dp</dimen>
+    <dimen name="btn_height">70dp</dimen>
+    <dimen name="btn_num_dim">95dp</dimen>
+    <dimen name="ic_back_dimen">40dp</dimen>
+</resources>
