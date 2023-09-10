@@ -88,10 +88,10 @@ class MainActivity : AppCompatActivity() {
         val value2 = editTextTwo.text.toString().toFloatOrNull() ?: 0f
         resultTextView.text =
             when (operator) {
-                "+" -> (value1 + value2).toString()
-                "-" -> (value1 - value2).toString()
-                "x" -> (value1 * value2).toString()
-                "/" -> (value1 / value2).toString()
+                CalculatorOperations.ADDITION -> (value1 + value2).toString()
+                CalculatorOperations.SUBTRACTION -> (value1 - value2).toString()
+                CalculatorOperations.MULTIPLICATION -> (value1 * value2).toString()
+                CalculatorOperations.DIVISION -> (value1 / value2).toString()
                 else -> ""
             }
     }
