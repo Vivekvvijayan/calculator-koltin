@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+
 class MainActivity : AppCompatActivity() {
 
     private var operator = ""
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpClickListeners() {
+
         numberButtons.forEach { id ->
             findViewById<Button>(id).apply {
                 setOnClickListener {
@@ -120,6 +122,7 @@ class MainActivity : AppCompatActivity() {
                 editTextTwo.text.toString().trim() != "."
 
     private fun disableKeyBoard() {
+
         editTextOne.inputType = InputType.TYPE_NULL
         editTextTwo.inputType = InputType.TYPE_NULL
     }
@@ -128,13 +131,14 @@ class MainActivity : AppCompatActivity() {
         editTextOne.text.clear()
         editTextTwo.text.clear()
         resultTextView.text = ""
+        operator = ""
     }
 
-    private fun EditText.removeLastCharacterFromEditText(): Boolean {
-        if (text.isNotEmpty()) {
+    private fun EditText.removeLastCharacterFromEditText() {
+        text.takeIf { it.isNotEmpty() }?.apply {
             setText(text.dropLast(1))
             setSelection(text.length)
         }
-        return true
+
     }
 }
