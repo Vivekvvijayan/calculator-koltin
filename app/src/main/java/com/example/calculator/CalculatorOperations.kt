@@ -1,8 +1,9 @@
 package com.example.calculator
 
-object CalculatorOperations {
-    const val ADDITION = "+"
-    const val SUBTRACTION = "-"
-    const val MULTIPLICATION = "x"
-    const val DIVISION = "/"
+enum class CalculatorOperator(val symbol: String) {
+    ADDITION("+"),
+    SUBTRACTION("-"),
+    MULTIPLICATION("x"),
+    DIVISION("/"),
+    EMPTY("")
 }

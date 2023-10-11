@@ -3,6 +3,7 @@
     <dimen name="dimension_8dp">8dp</dimen>
     <dimen name="dimension_16dp">16dp</dimen>
     <dimen name="dimension_32dp">32dp</dimen>
+    <dimen name="dimension_40dp">40dp</dimen>
     <dimen name="dimension_56dp">56dp</dimen>
     <dimen name="fs_20sp">20sp</dimen>
     <dimen name="fs_30sp">30sp</dimen>
